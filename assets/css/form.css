@@ -1,0 +1,111 @@
+.formArea {
+    flex: 1;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+
+.formArea .logo {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.formArea .logo img {
+    width: 100%;
+}
+.formArea .infoArea {
+    max-width: 300px;
+    text-align: center;
+}
+.formArea .infoArea h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.formArea .infoArea p {
+    font-size: 12px;
+}
+
+
+.formArea .inputBox {
+    margin-bottom: 15px;
+    position: relative;
+    max-width: 300px;
+    height: 50px;
+}
+.formArea .inputBox input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #eee9e7;
+    border-radius: 5px;
+    outline: none;
+}
+.formArea .inputBox input:hover,
+.formArea .inputBox input:focus {
+    border-color: #2f67cc;
+}
+
+.formArea .inputBox span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: all ease .3s;
+}
+
+.formArea .inputBox input:focus ~ span,
+.formArea .inputBox input:valid ~ span{
+    transform: translateX(0px)
+    translateY(-15px);
+    font-size: 12px;
+}
+
+
+
+.formArea button {
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #2f67cc;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.googleLogin {
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #eee9e7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.googleLogin img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.googleLogin span {
+    font-size: 12px;
+}
+
+.signUpArea {
+    font-size: 12px;
+}
+.signUpArea span {
+    font-weight: bold;
+    color: #2f67cc;
+}
+.signUpArea span:hover {
+    cursor: pointer;
+}

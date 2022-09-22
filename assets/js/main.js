@@ -1,6 +1,6 @@
 import {c, cs} from './helpers/selectors.js'
 import { runSlide } from './slide.js'
-import Validate from './form.js'
+import FormValidate from './form.js'
 
 startLoader();
 
@@ -10,8 +10,8 @@ setTimeout( () => {
 
 const emailInput = c('#email');
 const passwordInput = c('#password');
-const validate = new Validate(emailInput, passwordInput);
-c('#loginForm').addEventListener('submit', event => validate.formValidate(event));
+const formValidate = new FormValidate(emailInput, passwordInput);
+c('#loginForm').addEventListener('submit', event => formValidate.formValidate(event));
 
 runSlide()
 

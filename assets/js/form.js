@@ -1,4 +1,5 @@
-class Form {
+export default class FormValidate {
+    
     #email = null;
     #password = null;
 
@@ -7,11 +8,9 @@ class Form {
         this.#password = passwordInput;
     }
 
-    formValidate(eventForm) {
-        eventForm.preventDefault();
-
+    formValidate() {
         if(this.#emailValidate() && this.#passwordValidate() ) {
-            return eventForm.target.submit();
+            return true;
         }
     }
 
@@ -59,5 +58,3 @@ class Form {
         input.placeholder = message;
     }
 }
-
-export default class FormValidate extends Form {}

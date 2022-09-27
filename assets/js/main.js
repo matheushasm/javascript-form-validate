@@ -3,17 +3,22 @@ import { runSlide } from './slide.js'
 import FormValidate from './form.js'
 
 startLoader();
-
 setTimeout( () => {
     stopLoader();
 }, 1000)
 
-const emailInput = c('#email');
-const passwordInput = c('#password');
-const formValidate = new FormValidate(emailInput, passwordInput);
-c('#loginForm').addEventListener('submit', event => formValidate.formValidate(event));
-
 runSlide()
+
+const emailHtmlInput = c('#email');
+const passwordHtmlInput = c('#password');
+const formValidate = new FormValidate(emailHtmlInput, passwordHtmlInput);
+c('#loginForm').addEventListener('submit', event => {
+    event.preventDefault();
+
+    if(formValidate.formValidate()) {
+        return event.target.submit();
+    }
+});
 
 function startLoader() {
     c('.container').style.opacity = '0';
